@@ -6,13 +6,13 @@ import * as sqlops from 'sqlops';
 
 import * as fs from 'fs';
 
-const entry = fs.readFileSync('./entry.html').toString();
+const angularIndex = fs.readFileSync('./angularApp/index.html').toString();
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-    sqlops.dashboard.registerWebviewProvider('my-tab', e => {
-        e.html = entry;
+    sqlops.dashboard.registerWebviewProvider('angular-tab', e => {
+        e.html = angularIndex;
     });
 }
 

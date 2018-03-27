@@ -27,25 +27,35 @@
                 "container": {
                     "webview-container": null
                 },
-                "id": "my-tab",
-                "title": "webview tab"
+                "id": "angular-tab",
+                "title": "Angular Tab"
             }
         ]
     },
     "scripts": {
         "prepare": "",
         "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
+        "compile": "gulp compile",
         "postinstall": "node ./node_modules/vscode/bin/install && node ./node_modules/sqlops/bin/install",
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6",
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "gulp": "^3.9.1",
+        "gulp-typescript": "^4.0.1",
         "sqlops": "github:anthonydresser/vscode-extension-vscode",
         "tslint": "^5.8.0",
-        "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6"
+    },
+    "dependencies": {
+        "@angular/common": "^5.2.9",
+        "@angular/compiler": "^5.2.9",
+        "@angular/core": "^5.2.9",
+        "@angular/platform-browser": "^5.2.9",
+        "@angular/platform-browser-dynamic": "^5.2.9",
+        "rxjs": "^5.5.8",
+        "zone.js": "^0.8.20"
     }
 }
